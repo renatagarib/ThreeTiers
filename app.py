@@ -29,7 +29,21 @@ def read_all():
             print(result_jason)
             return create_response(200, 'students', result_jason)
 
+@app.route('/students/<id>', methods=['GET'])
+def read_one(id):
+    connection = pymysql.connect(host='localhost',
+                                user='root',
+                                password='nilmar21',
+                                database='mydb')
 
+    with connection:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM `aluno` WHERE `CPF`=%s"
+            cursor.execute(sql, id)
+            result = cursor.fetchall()
+            result_jason = [to_json(student) for student in result]
+            print(result_jason)
+            return create_response(200, 'students', result_jason)
 
 
 def create_response(status, content_name, content, message=False):

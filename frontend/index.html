@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Alunos</h2>
+
+<div>
+  <h3>Listar todos os alunos</h3>
+  <button type="button" onclick="listarTodos()">Listar todos</button>
+  <p id="listar_todos_table"></p>
+</div>
+
+<div>
+  <h3>Listar um aluno</h3>
+  <form id="listar_um">
+    CPF: <input type="text">
+  </form>
+  <button onclick="listarUm()">ok</button>
+  <p id="listar_um_table"></p>
+</div>
+
+<div>
+  <h3>Adicionar um aluno</h3>
+  <form id="add">
+    CPF: <input type="text"><br>
+    Nome: <input type="text"><br>
+    Idade: <input type="text"><br>
+    Email: <input type="text"><br>
+    Média: <input type="text"><br>
+    Histórico: <input type="text"><br>
+    Turma: <input type="text"><br>
+  </form>
+  <button onclick="add()">ok</button>
+  <p id="add_table"></p>
+</div>
+
+<div>
+  <h3>Atualizar as informações de um aluno</h3>
+  <form id="update">
+    CPF: <input type="text"><br>
+    Informações para atualizar: <br>
+    Nome: <input type="text"><br>
+    Idade: <input type="text"><br>
+    Email: <input type="text"><br>
+    Média: <input type="text"><br>
+    Histórico: <input type="text"><br>
+    Turma: <input type="text"><br>
+  </form>
+  <button onclick="update()">ok</button>
+  <p id="update_table"></p>
+</div>
+
+<div>
+  <h3>Deletar um aluno</h3>
+  <form id="deletar">
+    CPF: <input type="text"><br>
+  </form>
+  <button onclick="deletar()">ok</button>
+  <p id="deletar_table"></p>
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
